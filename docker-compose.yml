@@ -9,6 +9,8 @@ services:
     volumes:
       - ./java0:/app/java0
       - m2-cache:/.m2
+    ports:
+      - "8080:8080"
 
 volumes:
   m2-cache:
