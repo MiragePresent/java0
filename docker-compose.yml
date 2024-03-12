@@ -6,11 +6,12 @@ services:
       context: .
     environment:
       APP_VERSION: "1.0-SNAPSHOT"
+      HTTP_LISTENING_PORT: "9090"
     volumes:
       - ./java0:/app/java0
       - m2-cache:/.m2
     ports:
-      - "8080:8080"
+      - "8080:9090"
 
 volumes:
   m2-cache:
