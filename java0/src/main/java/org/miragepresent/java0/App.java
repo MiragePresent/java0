@@ -22,19 +22,17 @@ public class App
                 System.out.println("HTTP_LISTENING_PORT is not define. Defaulting to 8080");
                 serverPort = "8080";
             }
-
-            try {
-                Long portNumber = Long.valueOf(serverPort);
-                System.out.println("Start listening on port " + serverPort + "...");
-                HttpServer server = HttpServer.create(new InetSocketAddress(portNumber.intValue()),0);
-                server.createContext("/", new HomePageHandler());
-                server.setExecutor(null);
-                server.start();
-            } catch (NumberFormatException e) {
-                throw new ServerException("Cannot start webserver. HTTP_LISTENING_PORT is invalid");
-            }
+            
+            Long portNumber = Long.valueOf(serverPort);
+            System.out.println("Start listening on port " + serverPort + "...");
+            HttpServer server = HttpServer.create(new InetSocketAddress(portNumber.intValue()),0);
+            server.createContext("/", new HomePageHandler());
+            server.setExecutor(null);
+            server.start();
+        } catch (NumberFormatException e) {
+            System.out.println("Cannot start webserver. HTTP_LISTENING_PORT is invalid");
         } catch (Exception e) {
-            System.out.print("Server error: " + e.getMessage());
+            System.out.println("Server error: " + e.getMessage());
         }
     }
 }
