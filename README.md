@@ -23,5 +23,5 @@ docker compose run java0 mnv formatter:format
 
 ## TODO
 
-- [ ] Finish formatting setup
+- [x] Finish formatting setup
 - [ ] Add DB and test connection
