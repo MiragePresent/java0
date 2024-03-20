@@ -10,6 +10,17 @@ The app can be simply executed with docker-compose
 docker compose up
 ```
 
+## Tools
+
+**Code formatter** -- to format code run the next command 
+
+```shell
+# locally
+mvn formatter:format
+# or from container
+docker compose run java0 mnv formatter:format
+```
+
 ## TODO
 
 - [ ] Finish formatting setup

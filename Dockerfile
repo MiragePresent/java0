@@ -30,4 +30,6 @@ RUN chown runner /setup.sh \
 
 USER runner
 
+WORKDIR /app/java0
+
 CMD ["/bin/bash", "/setup.sh"]
