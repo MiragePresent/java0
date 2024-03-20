@@ -16,9 +16,16 @@ docker compose up
 
 ```shell
 # locally
-mvn formatter:format
+# check formatting
+mvn spotless:check
+# fix formatting
+mvn spotless:apply
+
 # or from container
-docker compose run java0 mnv formatter:format
+# check formatting
+docker compose run java0 mnv spotless:check
+# fix formatting
+docker compose run java0 mnv spotless:apply
 ```
 
 ## TODO
