@@ -19,10 +19,10 @@ public class App
             String serverPort = System.getenv("HTTP_LISTENING_PORT");
             
             if (serverPort == null) {
-                System.out.println("HTTP_LISTENING_PORT is not define. Defaulting to 8080");
+                    System.out.println("HTTP_LISTENING_PORT is not define. Defaulting to 8080");
                 serverPort = "8080";
             }
-            
+
             Long portNumber = Long.valueOf(serverPort);
             System.out.println("Start listening on port " + serverPort + "...");
             HttpServer server = HttpServer.create(new InetSocketAddress(portNumber.intValue()),0);

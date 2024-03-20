@@ -9,3 +9,8 @@ The app can be simply executed with docker-compose
 ```shell
 docker compose up
 ```
+
+## TODO
+
+- [ ] Finish formatting setup
+- [ ] Add DB and test connection
